@@ -5,11 +5,11 @@ COPY build.gradle .
 COPY settings.gradle .
 COPY src src
 
-COPY gradle .
+COPY gradlew .
 COPY gradle gradle
 
-RUN chmod +x gradle
-RUN ./gradle build -x test
+RUN chmod +x gradlew
+RUN ./gradlew build -x test
 
 FROM openjdk:21-jdk
 VOLUME /tmp
