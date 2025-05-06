@@ -8,8 +8,8 @@ COPY src src
 COPY gradlew .
 COPY gradle gradle
 
-RUN chmod +x ./gradlew
-RUN ./gradlew build -x test
+RUN chmod +x ./gradle
+RUN ./gradle build -x test
 
 FROM openjdk:21-jdk
 VOLUME /tmp
