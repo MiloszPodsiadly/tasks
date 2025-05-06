@@ -8,7 +8,7 @@ COPY src src
 COPY gradlew .
 COPY gradle gradle
 
-RUN chmod +x ./gradle
+RUN chmod +x gradle
 RUN ./gradle build -x test
 
 FROM openjdk:21-jdk
