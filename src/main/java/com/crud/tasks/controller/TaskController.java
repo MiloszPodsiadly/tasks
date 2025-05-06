@@ -11,9 +11,9 @@ import com.crud.tasks.domain.Task;
 import org.springframework.http.MediaType;
 import com.crud.tasks.exception.TaskNotFoundException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
-
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/v1/tasks")
 public class TaskController {
@@ -48,7 +48,7 @@ public class TaskController {
         Task savedTask = service.saveTask(task);
         return ResponseEntity.ok(taskMapper.mapToTaskDto(savedTask));
     }
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void>  createTask(@RequestBody TaskDto taskDto) {
         Task task = taskMapper.mapToTask(taskDto);
         service.saveTask(task);
