@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PostMapping;
+import com.crud.tasks.domain.TrelloCardDto;
 
 import java.util.List;
 
@@ -22,8 +25,19 @@ public class TrelloController {
     public List<TrelloBoardDto> getTrelloBoards() {
         List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 
+        trelloBoards.forEach(trelloBoardDto -> {
+            System.out.println(trelloBoardDto.getId() + " - " + trelloBoardDto.getName());
+            System.out.println("This board contains lists: ");
+            trelloBoardDto.getLists().forEach(trelloList -> {
+                System.out.println(trelloList.getName() + " - " + trelloList.getId() + " - " + trelloList.isClosed());
+            });
+        });
         return trelloBoards.stream()
-                .filter(board -> board.getName().contains("Kodilla"))
                 .toList();
-        }
     }
+    @PostMapping("cards")
+    public List<TrelloCardDto> createTrelloCards(@RequestBody List<TrelloCardDto> trelloCardDtos) {
+        return trelloClient.createTrelloCards(trelloCardDtos);
+    }
+
+}
