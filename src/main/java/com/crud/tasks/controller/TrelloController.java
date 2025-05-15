@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.crud.tasks.domain.TrelloCardDto;
+import com.crud.tasks.domain.CreatedTrelloCardDto;
 
 import java.util.List;
 
@@ -36,8 +37,7 @@ public class TrelloController {
                 .toList();
     }
     @PostMapping("cards")
-    public List<TrelloCardDto> createTrelloCards(@RequestBody List<TrelloCardDto> trelloCardDtos) {
+    public List<CreatedTrelloCardDto> createTrelloCards(@RequestBody List<TrelloCardDto> trelloCardDtos) {
         return trelloClient.createTrelloCards(trelloCardDtos);
     }
-
 }
