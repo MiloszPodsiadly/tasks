@@ -12,24 +12,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.crud.tasks.domain.TrelloCardDto;
 import com.crud.tasks.domain.CreatedTrelloCardDto;
+import com.crud.tasks.service.TrelloService;
+import lombok.extern.slf4j.Slf4j;
+
+
 
 import java.util.List;
-
+@Slf4j
 @RestController
 @RequestMapping("v1/trello")
 @RequiredArgsConstructor
 @CrossOrigin("*")
 public class TrelloController {
 
-    private final TrelloClient trelloClient;
+    private final TrelloService trelloService;
 
     @GetMapping("boards")
     public ResponseEntity<List<TrelloBoardDto>> getTrelloBoards() {
-        return ResponseEntity.ok(trelloClient.getTrelloBoards());
+        return ResponseEntity.ok(trelloService.fetchTrelloBoards());
     }
 
     @PostMapping("cards")
     public ResponseEntity<CreatedTrelloCardDto> createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
-        return ResponseEntity.ok(trelloClient.createSingleCard(trelloCardDto));
+        log.info("Received request to create card: {}", trelloCardDto);
+        return ResponseEntity.ok(trelloService.createTrelloCard(trelloCardDto));
     }
 }

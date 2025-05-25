@@ -138,7 +138,7 @@ public class TrelloClientTestSuite {
         trelloCardDto.setName("Test task");
         trelloCardDto.setDesc("Test Description");
         trelloCardDto.setPos("top");
-        trelloCardDto.setIdList("test_id");
+        trelloCardDto.setListId("test_id");
 
         URI uri = new URI("http://test.com/cards?key=test&token=test&name=Test%20task&desc=Test%20Description&pos=top&idList=test_id");
 
