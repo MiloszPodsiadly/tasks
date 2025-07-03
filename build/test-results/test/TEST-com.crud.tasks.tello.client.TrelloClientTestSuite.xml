@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.tello.client.TrelloClientTestSuite" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-05-25T11:21:28" hostname="LAPTOP-UQ2O29VI" time="0.747">
+<testsuite name="com.crud.tasks.tello.client.TrelloClientTestSuite" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-03T16:41:43" hostname="LAPTOP-UQ2O29VI" time="1.116">
   <properties/>
-  <testcase name="shouldReturnEmptyListAndLogErrorWhenExceptionOccurs()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.638"/>
-  <testcase name="shouldReturnEmptyList()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.023"/>
-  <testcase name="shouldFetchTrelloBoards()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.013"/>
-  <testcase name="shouldCreateCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.017"/>
-  <testcase name="shouldReturnNullAndLogErrorWhenExceptionOccursWhileCreatingCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.041"/>
-  <system-out><![CDATA[2025-05-25T13:21:29.027+02:00 ERROR 17680 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while fetching Trello boards
+  <testcase name="shouldReturnEmptyListAndLogErrorWhenExceptionOccurs()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.905"/>
+  <testcase name="shouldReturnEmptyList()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.039"/>
+  <testcase name="shouldFetchTrelloBoards()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.037"/>
+  <testcase name="shouldCreateCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.042"/>
+  <testcase name="shouldReturnNullAndLogErrorWhenExceptionOccursWhileCreatingCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.064"/>
+  <system-out><![CDATA[2025-07-03T18:41:44.239+02:00 ERROR 22128 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while fetching Trello boards
 
 org.springframework.web.client.RestClientException: Test exception
 	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:430) ~[spring-web-6.2.5.jar:6.2.5]
 	at com.crud.tasks.trello.client.TrelloClient.getTrelloBoards(TrelloClient.java:42) ~[main/:na]
-	at com.crud.tasks.tello.client.TrelloClientTestSuite.shouldReturnEmptyListAndLogErrorWhenExceptionOccurs(TrelloClientTestSuite.java:68) ~[test/:na]
+	at com.crud.tasks.tello.client.TrelloClientTestSuite.shouldReturnEmptyListAndLogErrorWhenExceptionOccurs(TrelloClientTestSuite.java:63) ~[test/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.4.jar:1.11.4]
@@ -94,12 +94,12 @@ org.springframework.web.client.RestClientException: Test exception
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
 
-2025-05-25T13:21:29.164+02:00 ERROR 17680 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while creating Trello card
+2025-07-03T18:41:44.547+02:00 ERROR 22128 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while creating Trello card
 
 org.springframework.web.client.RestClientException: Test exception
 	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:537) ~[spring-web-6.2.5.jar:6.2.5]
 	at com.crud.tasks.trello.client.TrelloClient.createSingleCard(TrelloClient.java:74) ~[main/:na]
-	at com.crud.tasks.tello.client.TrelloClientTestSuite.shouldReturnNullAndLogErrorWhenExceptionOccursWhileCreatingCard(TrelloClientTestSuite.java:90) ~[test/:na]
+	at com.crud.tasks.tello.client.TrelloClientTestSuite.shouldReturnNullAndLogErrorWhenExceptionOccursWhileCreatingCard(TrelloClientTestSuite.java:84) ~[test/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.4.jar:1.11.4]

@@ -12,22 +12,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import com.crud.tasks.domain.TrelloBoardDto;
-import com.crud.tasks.trello.client.TrelloClient;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import com.crud.tasks.domain.TrelloCardDto;
 import com.crud.tasks.domain.CreatedTrelloCardDto;
-import java.net.URI;
-import java.util.Collections;
+import com.crud.tasks.trello.client.TrelloClient;
 import com.crud.tasks.trello.config.TrelloConfig;
+
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
 
-
-
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class TrelloClientTestSuite {
 
@@ -65,15 +60,14 @@ public class TrelloClientTestSuite {
                 .getForObject(any(URI.class), eq(TrelloBoardDto[].class));
 
         // When
-        var result = trelloClient.getTrelloBoards();
+        List<TrelloBoardDto> result = trelloClient.getTrelloBoards();
 
         // Then
-        assertEquals(Collections.emptyList(), result);
+        assertEquals(Collections.emptyList(), result, "Result should be an empty list due to exception");
 
         boolean errorLogged = listAppender.list.stream()
-                .anyMatch(event ->
-                        event.getLevel().toString().equals("ERROR") &&
-                                event.getMessage().contains("Error while fetching Trello boards"));
+                .anyMatch(event -> event.getLevel().toString().equals("ERROR") &&
+                        event.getMessage().contains("Error while fetching Trello boards"));
 
         assertTrue(errorLogged, "Expected ERROR log with the message 'Error while fetching Trello boards' was not found.");
     }
@@ -90,27 +84,25 @@ public class TrelloClientTestSuite {
         CreatedTrelloCardDto result = trelloClient.createSingleCard(cardDto);
 
         // Then
-        assertNull(result);
+        assertNull(result, "Result should be null due to exception");
 
         boolean errorLogged = listAppender.list.stream()
-                .anyMatch(event ->
-                        event.getLevel().toString().equals("ERROR") &&
-                                event.getMessage().contains("Error while creating Trello card"));
+                .anyMatch(event -> event.getLevel().toString().equals("ERROR") &&
+                        event.getMessage().contains("Error while creating Trello card"));
 
         assertTrue(errorLogged, "Expected ERROR log with the message 'Error while creating Trello card' was not found.");
     }
+
     @Test
-    public void shouldFetchTrelloBoards() throws URISyntaxException {
+    void shouldFetchTrelloBoards() throws URISyntaxException {
         // Given
         when(trelloConfig.getTrelloApiEndpoint()).thenReturn("http://test.com");
         when(trelloConfig.getTrelloAppKey()).thenReturn("test");
         when(trelloConfig.getTrelloToken()).thenReturn("test");
         when(trelloConfig.getTrelloUser()).thenReturn("test");
 
-        TrelloBoardDto trelloBoard = new TrelloBoardDto();
-        trelloBoard.setId("test_id");
-        trelloBoard.setName("test_board");
-        trelloBoard.setLists(new ArrayList<>());
+        TrelloBoardDto trelloBoard = new TrelloBoardDto("test_id", "test_board", new ArrayList<>());
+
 
         TrelloBoardDto[] trelloBoards = new TrelloBoardDto[]{trelloBoard};
 
@@ -127,8 +119,9 @@ public class TrelloClientTestSuite {
         assertEquals("test_board", fetchedTrelloBoards.get(0).getName());
         assertEquals(new ArrayList<>(), fetchedTrelloBoards.get(0).getLists());
     }
+
     @Test
-    public void shouldCreateCard() throws URISyntaxException {
+    void shouldCreateCard() throws URISyntaxException {
         // Given
         when(trelloConfig.getTrelloApiEndpoint()).thenReturn("http://test.com");
         when(trelloConfig.getTrelloAppKey()).thenReturn("test");
@@ -147,7 +140,6 @@ public class TrelloClientTestSuite {
         createdTrelloCard.setName("test task");
         createdTrelloCard.setShortUrl("http://test.com");
 
-
         when(restTemplate.postForObject(uri, null, CreatedTrelloCardDto.class)).thenReturn(createdTrelloCard);
 
         // When
@@ -158,8 +150,9 @@ public class TrelloClientTestSuite {
         assertEquals("test task", newCard.getName());
         assertEquals("http://test.com", newCard.getShortUrl());
     }
+
     @Test
-    public void shouldReturnEmptyList() {
+    void shouldReturnEmptyList() {
         // Given
         String url = "http://test.com/boards";
         when(restTemplate.getForObject(url, TrelloBoardDto[].class)).thenReturn(null);
@@ -169,9 +162,7 @@ public class TrelloClientTestSuite {
         List<TrelloBoardDto> result = Arrays.asList(Optional.ofNullable(boardsResponse).orElse(new TrelloBoardDto[0]));
 
         // Then
-        assertNotNull(result);
-        assertEquals(0, result.size());
+        assertNotNull(result, "Result should be a non-null list");
+        assertEquals(0, result.size(), "List size should be 0 due to null response");
     }
-
-
 }
