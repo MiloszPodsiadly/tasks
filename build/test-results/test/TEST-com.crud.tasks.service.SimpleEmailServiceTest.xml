@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.service.SimpleEmailServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-03T16:41:42" hostname="LAPTOP-UQ2O29VI" time="0.692">
+<testsuite name="com.crud.tasks.service.SimpleEmailServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-04T17:31:15" hostname="LAPTOP-UQ2O29VI" time="0.165">
   <properties/>
-  <testcase name="shouldSendEmail()" classname="com.crud.tasks.service.SimpleEmailServiceTest" time="0.692"/>
-  <system-out><![CDATA[2025-07-03T18:41:43.299+02:00  INFO 22128 --- [tasks] [    Test worker] c.crud.tasks.service.SimpleEmailService  : Starting email preparation...
-2025-07-03T18:41:43.400+02:00  INFO 22128 --- [tasks] [    Test worker] c.crud.tasks.service.SimpleEmailService  : Email has been sent.
+  <testcase name="shouldSendEmail()" classname="com.crud.tasks.service.SimpleEmailServiceTest" time="0.165"/>
+  <system-out><![CDATA[2025-07-04T19:31:15.596+02:00  INFO 24540 --- [tasks] [    Test worker] c.crud.tasks.service.SimpleEmailService  : Starting email preparation...
+2025-07-04T19:31:15.609+02:00  INFO 24540 --- [tasks] [    Test worker] c.crud.tasks.service.SimpleEmailService  : Email has been sent.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
