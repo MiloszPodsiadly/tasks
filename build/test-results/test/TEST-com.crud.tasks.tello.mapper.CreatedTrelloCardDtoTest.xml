@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-04T17:31:16" hostname="LAPTOP-UQ2O29VI" time="0.169">
+<testsuite name="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-04T20:29:09" hostname="LAPTOP-UQ2O29VI" time="0.029">
   <properties/>
-  <testcase name="shouldDeserializeFromJson()" classname="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" time="0.12"/>
-  <testcase name="shouldSerializeToJson()" classname="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" time="0.046"/>
-  <testcase name="shouldCreateCreatedTrelloCardDtoWithNestedFields()" classname="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" time="0.002"/>
+  <testcase name="shouldDeserializeFromJson()" classname="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" time="0.017"/>
+  <testcase name="shouldSerializeToJson()" classname="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" time="0.009"/>
+  <testcase name="shouldCreateCreatedTrelloCardDtoWithNestedFields()" classname="com.crud.tasks.tello.mapper.CreatedTrelloCardDtoTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
