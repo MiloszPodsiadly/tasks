@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.controller.TrelloControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-05T13:20:24" hostname="LAPTOP-UQ2O29VI" time="0.17">
+<testsuite name="com.crud.tasks.controller.TrelloControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-05T17:51:40" hostname="LAPTOP-UQ2O29VI" time="0.145">
   <properties/>
-  <testcase name="shouldFetchTrelloBoards()" classname="com.crud.tasks.controller.TrelloControllerTest" time="0.128"/>
-  <testcase name="shouldCreateTrelloCard()" classname="com.crud.tasks.controller.TrelloControllerTest" time="0.038"/>
-  <system-out><![CDATA[2025-07-05T15:20:23.169+02:00  INFO 27328 --- [tasks] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.controller.TrelloControllerTest
+  <testcase name="shouldFetchTrelloBoards()" classname="com.crud.tasks.controller.TrelloControllerTest" time="0.096"/>
+  <testcase name="shouldCreateTrelloCard()" classname="com.crud.tasks.controller.TrelloControllerTest" time="0.045"/>
+  <system-out><![CDATA[2025-07-05T19:51:38.494+02:00  INFO 18572 --- [tasks] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.controller.TrelloControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,25 +14,25 @@
 
  :: Spring Boot ::                (v3.4.4)
 
-2025-07-05T15:20:23.325+02:00  INFO 27328 --- [tasks] [    Test worker] c.c.t.controller.TrelloControllerTest    : Starting TrelloControllerTest using Java 21.0.6 with PID 27328 (started by mpods in C:\Users\mpods\IdeaProjects\tasks)
-2025-07-05T15:20:23.326+02:00  INFO 27328 --- [tasks] [    Test worker] c.c.t.controller.TrelloControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2025-07-05T15:20:23.342+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5b7e6e2d
-2025-07-05T15:20:24.473+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-07-05T15:20:24.504+02:00 DEBUG 27328 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
-2025-07-05T15:20:24.728+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-07-05T15:20:24.752+02:00 DEBUG 27328 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-07-05T15:20:24.777+02:00 DEBUG 27328 --- [tasks] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-07-05T15:20:24.832+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-07-05T15:20:24.833+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-07-05T15:20:24.836+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2025-07-05T15:20:24.892+02:00  INFO 27328 --- [tasks] [    Test worker] c.c.t.controller.TrelloControllerTest    : Started TrelloControllerTest in 1.71 seconds (process running for 42.195)
-2025-07-05T15:20:24.956+02:00 DEBUG 27328 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.crud.tasks.controller.TrelloController#getTrelloBoards()
-2025-07-05T15:20:24.989+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-07-05T15:20:24.991+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[TrelloBoardDto(id=1, name=Test Task, lists=[TrelloListDto(id=1, name=Test list, isClosed=false)])]]
-2025-07-05T15:20:25.056+02:00 DEBUG 27328 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.crud.tasks.controller.TrelloController#createTrelloCard(TrelloCardDto)
-2025-07-05T15:20:25.067+02:00 DEBUG 27328 --- [tasks] [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TrelloCardDto(name=Test, desc=Test description, pos=top, listId=1)]
-2025-07-05T15:20:25.079+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-07-05T15:20:25.081+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CreatedTrelloCardDto(id=232, name=Test, shortUrl=http://test.com, badges=null)]
+2025-07-05T19:51:38.730+02:00  INFO 18572 --- [tasks] [    Test worker] c.c.t.controller.TrelloControllerTest    : Starting TrelloControllerTest using Java 21.0.6 with PID 18572 (started by mpods in C:\Users\mpods\IdeaProjects\tasks)
+2025-07-05T19:51:38.732+02:00  INFO 18572 --- [tasks] [    Test worker] c.c.t.controller.TrelloControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2025-07-05T19:51:38.750+02:00 DEBUG 18572 --- [tasks] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6a41ed18
+2025-07-05T19:51:40.168+02:00  INFO 18572 --- [tasks] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-05T19:51:40.207+02:00 DEBUG 18572 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-07-05T19:51:40.397+02:00 DEBUG 18572 --- [tasks] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-05T19:51:40.421+02:00 DEBUG 18572 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-05T19:51:40.453+02:00 DEBUG 18572 --- [tasks] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-05T19:51:40.530+02:00  INFO 18572 --- [tasks] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-07-05T19:51:40.531+02:00  INFO 18572 --- [tasks] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-07-05T19:51:40.535+02:00  INFO 18572 --- [tasks] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-07-05T19:51:40.579+02:00  INFO 18572 --- [tasks] [    Test worker] c.c.t.controller.TrelloControllerTest    : Started TrelloControllerTest in 2.062 seconds (process running for 29.578)
+2025-07-05T19:51:40.635+02:00 DEBUG 18572 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.crud.tasks.controller.TrelloController#getTrelloBoards()
+2025-07-05T19:51:40.658+02:00 DEBUG 18572 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-07-05T19:51:40.662+02:00 DEBUG 18572 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[TrelloBoardDto(id=1, name=Test Task, lists=[TrelloListDto(id=1, name=Test list, isClosed=false)])]]
+2025-07-05T19:51:40.712+02:00 DEBUG 18572 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.crud.tasks.controller.TrelloController#createTrelloCard(TrelloCardDto)
+2025-07-05T19:51:40.724+02:00 DEBUG 18572 --- [tasks] [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TrelloCardDto(name=Test, desc=Test description, pos=top, listId=1)]
+2025-07-05T19:51:40.735+02:00 DEBUG 18572 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-07-05T19:51:40.736+02:00 DEBUG 18572 --- [tasks] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CreatedTrelloCardDto(id=232, name=Test, shortUrl=http://test.com, badges=null)]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
