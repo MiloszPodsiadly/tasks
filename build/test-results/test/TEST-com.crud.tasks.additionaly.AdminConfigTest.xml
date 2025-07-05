@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.additionaly.AdminConfigTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-04T20:29:02" hostname="LAPTOP-UQ2O29VI" time="0.018">
+<testsuite name="com.crud.tasks.additionaly.AdminConfigTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-05T13:20:19" hostname="LAPTOP-UQ2O29VI" time="0.043">
   <properties/>
-  <testcase name="shouldReturnAdminEmailFromProperties()" classname="com.crud.tasks.additionaly.AdminConfigTest" time="0.018"/>
-  <system-out><![CDATA[2025-07-04T22:29:01.146+02:00  INFO 8672 --- [tasks] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.additionaly.AdminConfigTest]: AdminConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-04T22:29:01.202+02:00  INFO 8672 --- [tasks] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.additionaly.AdminConfigTest
+  <testcase name="shouldReturnAdminEmailFromProperties()" classname="com.crud.tasks.additionaly.AdminConfigTest" time="0.043"/>
+  <system-out><![CDATA[2025-07-05T15:20:14.100+02:00  INFO 27328 --- [tasks] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.additionaly.AdminConfigTest]: AdminConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-05T15:20:14.146+02:00  INFO 27328 --- [tasks] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.additionaly.AdminConfigTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,19 +14,19 @@
 
  :: Spring Boot ::                (v3.4.4)
 
-2025-07-04T22:29:01.299+02:00  INFO 8672 --- [tasks] [    Test worker] c.c.tasks.additionaly.AdminConfigTest    : Starting AdminConfigTest using Java 21.0.6 with PID 8672 (started by mpods in C:\Users\mpods\IdeaProjects\tasks)
-2025-07-04T22:29:01.300+02:00  INFO 8672 --- [tasks] [    Test worker] c.c.tasks.additionaly.AdminConfigTest    : No active profile set, falling back to 1 default profile: "default"
-2025-07-04T22:29:01.308+02:00 DEBUG 8672 --- [tasks] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8933b
-2025-07-04T22:29:01.887+02:00  INFO 8672 --- [tasks] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-04T22:29:01.943+02:00  INFO 8672 --- [tasks] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
-2025-07-04T22:29:02.204+02:00  INFO 8672 --- [tasks] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-04T22:29:02.216+02:00  INFO 8672 --- [tasks] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-04T22:29:02.250+02:00  INFO 8672 --- [tasks] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-04T22:29:02.253+02:00  INFO 8672 --- [tasks] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-07-04T22:29:02.265+02:00  INFO 8672 --- [tasks] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9d7d3f
-2025-07-04T22:29:02.266+02:00  INFO 8672 --- [tasks] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-07-04T22:29:02.269+02:00  WARN 8672 --- [tasks] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-07-04T22:29:02.270+02:00  INFO 8672 --- [tasks] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-07-05T15:20:14.215+02:00  INFO 27328 --- [tasks] [    Test worker] c.c.tasks.additionaly.AdminConfigTest    : Starting AdminConfigTest using Java 21.0.6 with PID 27328 (started by mpods in C:\Users\mpods\IdeaProjects\tasks)
+2025-07-05T15:20:14.216+02:00  INFO 27328 --- [tasks] [    Test worker] c.c.tasks.additionaly.AdminConfigTest    : No active profile set, falling back to 1 default profile: "default"
+2025-07-05T15:20:14.222+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73760b13
+2025-07-05T15:20:15.688+02:00  INFO 27328 --- [tasks] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-05T15:20:15.774+02:00  INFO 27328 --- [tasks] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2025-07-05T15:20:16.223+02:00  INFO 27328 --- [tasks] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-05T15:20:16.233+02:00  INFO 27328 --- [tasks] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-05T15:20:16.320+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-05T15:20:16.325+02:00  INFO 27328 --- [tasks] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-05T15:20:16.422+02:00  INFO 27328 --- [tasks] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43e869ea
+2025-07-05T15:20:16.423+02:00  INFO 27328 --- [tasks] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-05T15:20:16.430+02:00  WARN 27328 --- [tasks] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-05T15:20:16.432+02:00  INFO 27328 --- [tasks] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
 	Database driver: undefined/unknown
 	Database version: 9.2
@@ -34,15 +34,16 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-07-04T22:29:02.359+02:00  INFO 8672 --- [tasks] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-04T22:29:02.380+02:00  INFO 8672 --- [tasks] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-04T22:29:02.622+02:00  WARN 8672 --- [tasks] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-04T22:29:02.654+02:00  INFO 8672 --- [tasks] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-07-04T22:29:02.679+02:00 DEBUG 8672 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
-2025-07-04T22:29:02.754+02:00 DEBUG 8672 --- [tasks] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-07-04T22:29:02.776+02:00 DEBUG 8672 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-07-04T22:29:02.791+02:00 DEBUG 8672 --- [tasks] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-07-04T22:29:02.902+02:00  INFO 8672 --- [tasks] [    Test worker] c.c.tasks.additionaly.AdminConfigTest    : Started AdminConfigTest in 1.682 seconds (process running for 38.984)
+2025-07-05T15:20:16.686+02:00  INFO 27328 --- [tasks] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-05T15:20:16.734+02:00  INFO 27328 --- [tasks] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-05T15:20:17.719+02:00  WARN 27328 --- [tasks] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-05T15:20:17.827+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-05T15:20:17.884+02:00 DEBUG 27328 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2025-07-05T15:20:18.307+02:00 DEBUG 27328 --- [tasks] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-07-05T15:20:18.363+02:00 DEBUG 27328 --- [tasks] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-05T15:20:18.420+02:00 DEBUG 27328 --- [tasks] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-05T15:20:19.268+02:00  INFO 27328 --- [tasks] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/application'
+2025-07-05T15:20:19.387+02:00  INFO 27328 --- [tasks] [    Test worker] c.c.tasks.additionaly.AdminConfigTest    : Started AdminConfigTest in 5.226 seconds (process running for 36.689)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

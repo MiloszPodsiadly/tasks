@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.tello.mapper.TrelloListDtoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-04T20:29:09" hostname="LAPTOP-UQ2O29VI" time="0.006">
+<testsuite name="com.crud.tasks.tello.mapper.TrelloListDtoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-05T13:20:27" hostname="LAPTOP-UQ2O29VI" time="0.006">
   <properties/>
   <testcase name="shouldSerializeToJson()" classname="com.crud.tasks.tello.mapper.TrelloListDtoTest" time="0.003"/>
-  <testcase name="shouldCreateTrelloListDtoAndAccessFields()" classname="com.crud.tasks.tello.mapper.TrelloListDtoTest" time="0.002"/>
+  <testcase name="shouldCreateTrelloListDtoAndAccessFields()" classname="com.crud.tasks.tello.mapper.TrelloListDtoTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

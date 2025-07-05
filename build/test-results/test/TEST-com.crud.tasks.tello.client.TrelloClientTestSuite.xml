@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.tello.client.TrelloClientTestSuite" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-04T20:29:08" hostname="LAPTOP-UQ2O29VI" time="1.037">
+<testsuite name="com.crud.tasks.tello.client.TrelloClientTestSuite" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-05T13:20:25" hostname="LAPTOP-UQ2O29VI" time="0.899">
   <properties/>
-  <testcase name="shouldReturnEmptyListAndLogErrorWhenExceptionOccurs()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.944"/>
-  <testcase name="shouldReturnEmptyList()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.013"/>
-  <testcase name="shouldFetchTrelloBoards()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.01"/>
-  <testcase name="shouldCreateCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.01"/>
-  <testcase name="shouldReturnNullAndLogErrorWhenExceptionOccursWhileCreatingCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.053"/>
-  <system-out><![CDATA[2025-07-04T22:29:09.018+02:00 ERROR 8672 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while fetching Trello boards
+  <testcase name="shouldReturnEmptyListAndLogErrorWhenExceptionOccurs()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.793"/>
+  <testcase name="shouldReturnEmptyList()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.015"/>
+  <testcase name="shouldFetchTrelloBoards()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.014"/>
+  <testcase name="shouldCreateCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.013"/>
+  <testcase name="shouldReturnNullAndLogErrorWhenExceptionOccursWhileCreatingCard()" classname="com.crud.tasks.tello.client.TrelloClientTestSuite" time="0.054"/>
+  <system-out><![CDATA[2025-07-05T15:20:26.523+02:00 ERROR 27328 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while fetching Trello boards
 
 org.springframework.web.client.RestClientException: Test exception
 	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:430) ~[spring-web-6.2.5.jar:6.2.5]
@@ -94,7 +94,7 @@ org.springframework.web.client.RestClientException: Test exception
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
 
-2025-07-04T22:29:09.105+02:00 ERROR 8672 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while creating Trello card
+2025-07-05T15:20:26.632+02:00 ERROR 27328 --- [tasks] [    Test worker] c.crud.tasks.trello.client.TrelloClient  : Error while creating Trello card
 
 org.springframework.web.client.RestClientException: Test exception
 	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:537) ~[spring-web-6.2.5.jar:6.2.5]

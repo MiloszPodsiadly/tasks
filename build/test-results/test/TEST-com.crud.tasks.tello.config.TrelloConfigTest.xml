@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.tello.config.TrelloConfigTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-04T20:29:09" hostname="LAPTOP-UQ2O29VI" time="0.017">
+<testsuite name="com.crud.tasks.tello.config.TrelloConfigTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-05T13:20:26" hostname="LAPTOP-UQ2O29VI" time="0.028">
   <properties/>
-  <testcase name="testTrelloConfigLoadsProperly()" classname="com.crud.tasks.tello.config.TrelloConfigTest" time="0.017"/>
-  <system-out><![CDATA[2025-07-04T22:29:09.159+02:00  INFO 8672 --- [tasks] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.tello.config.TrelloConfigTest]: TrelloConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-04T22:29:09.241+02:00  INFO 8672 --- [tasks] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.tello.config.TrelloConfigTest
+  <testcase name="testTrelloConfigLoadsProperly()" classname="com.crud.tasks.tello.config.TrelloConfigTest" time="0.028"/>
+  <system-out><![CDATA[2025-07-05T15:20:26.694+02:00  INFO 27328 --- [tasks] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.tello.config.TrelloConfigTest]: TrelloConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-05T15:20:26.785+02:00  INFO 27328 --- [tasks] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.tello.config.TrelloConfigTest
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
